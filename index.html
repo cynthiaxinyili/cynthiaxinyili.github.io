@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Cynthia Xinyi Li</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400&display=swap">
+<style>
+/* Layout: classic faculty page — name masthead, tab bar, left contact column, right reading column */
+:root{--bg:#ffffff;--fg:#1d2330;--muted:#5d6577;--line:#dfe3ea;--accent:#2f4f8f;--tint:#f2f5fa;
+--display:"Newsreader",Georgia,serif;--body:"Public Sans",system-ui,sans-serif;--mono:"IBM Plex Mono",ui-monospace,monospace}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171d;--fg:#e4e7ee;--muted:#9aa2b3;--line:#2b313c;--accent:#8fb0ec;--tint:#1c212a;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14171d;--fg:#e4e7ee;--muted:#9aa2b3;--line:#2b313c;--accent:#8fb0ec;--tint:#1c212a;color-scheme:dark}
+body{background:var(--bg);color:var(--fg);font:16px/1.65 var(--body);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 48px}
+.wrap{max-width:980px;margin:0 auto}
+header{padding-block:44px 22px;border-bottom:1px solid var(--line)}
+h1{font:500 clamp(2.1rem,5vw,2.9rem)/1.1 var(--display);margin:0;letter-spacing:-.01em}
+.sub{color:var(--muted);margin-top:6px}
+.grid{display:grid;grid-template-columns:260px 1fr;gap:48px;padding-top:36px}
+@media (max-width:720px){.grid{grid-template-columns:1fr;gap:28px}}
+aside{display:flex;flex-direction:column;gap:18px;font-size:.92rem}
+.photo{width:100%;max-width:260px;aspect-ratio:68/54;background:var(--tint);border:1px solid var(--line);object-fit:cover;display:block}
+.label{font-size:.72rem;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);margin-bottom:2px}
+.mono{font-family:var(--mono);font-size:.86rem;word-break:break-all}
+a{color:var(--accent)}
+main{min-width:0;max-width:66ch}
+main h2{font:500 1.6rem/1.2 var(--display);margin:0 0 14px}
+main h3{font:600 1rem/1.35 var(--body);margin:0}
+main p{margin:0 0 14px}
+.item p{margin:0}.item p.meta{margin-top:6px}
+.item{display:flex;flex-direction:column;gap:4px;padding-block:16px;border-top:1px solid var(--line)}
+.item:first-of-type{border-top:0;padding-top:0}
+.meta{color:var(--muted);font-size:.88rem}
+.note{background:var(--tint);border:1px solid var(--line);padding:10px 14px;font-size:.88rem;color:var(--muted);margin-top:22px}
+main{display:flex;flex-direction:column;gap:44px}
+</style>
+
+<div class="wrap">
+<header><h1>Cynthia Xinyi Li</h1><div class="sub">Undergraduate, Carnegie Mellon University · Applying to Statistics and Biostatistics PhD programs for Fall 2027</div></header>
+
+<div class="grid">
+<aside>
+<img class="photo" alt="Cynthia Xinyi Li" src="photo.jpg">
+<div><div class="label">Email</div><div class="mono">cynthia6@andrew.cmu.edu</div></div>
+<div><div class="label">Address</div>Carnegie Mellon University<br>Pittsburgh, PA 15213</div>
+<div><div class="label">ORCID</div><a href="https://orcid.org/0009-0008-5440-412X" class="mono">0009-0008-5440-412X</a></div>
+<div><div class="label">CV</div><a href="https://drive.google.com/file/d/1MSYNSgzaxsMtX1KOWcuTBTtsJT-K2QQy/view">Curriculum Vitae (PDF)</a></div>
+</aside>
+
+<main>
+<section id="about">
+<h2>About</h2>
+<p>I am an undergraduate at Carnegie Mellon University studying economics and mathematical sciences. I am applying to PhD programs in statistics and biostatistics.</p>
+<p>I am interested in statistical methods for social networks and biomedical data. I work on models for social networks, including local network autocorrelation and multiplex network models, and on spatial inference for single-cell spatial transcriptomics in Alzheimer's disease. I have been fortunate to work with Prof. Nynke Niezink and Prof. Weijing Tang at CMU and Prof. Jiebiao Wang at the University of Pittsburgh.</p>
+<p>I have presented my work at CMU Networkshop, at CMU's Meeting of the Minds symposium, and at a biostatistics research group at the University of Pittsburgh, and I will present a poster at the 2026 Conference on Statistical Learning and Data Science in New York. I also regularly attend Networkshop, a weekly statistical network analysis group at CMU.</p>
+</section>
+
+<section id="research">
+<h2>Research</h2>
+<div class="item"><h3>Local network autocorrelation</h3><div class="meta">With Prof. Nynke Niezink, CMU Statistics · 2025–present</div><p>Adapts local autocorrelation measures from spatial statistics, local Moran's I and local join counts, to social networks to capture individual-level variation in attribute similarity. Evaluated with stochastic actor-oriented model simulations and permutation tests, and applied to longitudinal friendship data on stress, alcohol use, and smoking.</p><p class="meta"><b>Li, C. X.</b> and Niezink, N. M. D. Local Network Autocorrelation: Uncovering Individual Heterogeneity in Attribute Clustering. Submitted to <i>Sociological Methods &amp; Research</i>.</p></div>
+<div class="item"><h3>Multiplex p2 models for mixed networks</h3><div class="meta">With Prof. Nynke Niezink, CMU Statistics · 2026–present · R package <span class="mono">multip2</span></div><p>Extends the Bayesian multiplex p2 model to networks with both directed and undirected layers, deriving the dyad-level likelihood for mixed multiplex networks and implementing it in the <span class="mono">multip2</span> package.</p></div>
+<div class="item"><h3>Spatial inference in Alzheimer's disease</h3><div class="meta">With Prof. Jiebiao Wang, Pitt Biostatistics · 2026–present</div><p>Spatial analysis of single-cell spatial transcriptomics data to study how cell–cell and cell–pathology relationships change with disease progression, using KAMP-based colocalization inference, functional data analysis across spatial scales, and network-based measures of cell-type adjacency.</p></div>
+<div class="item"><h3>Item response theory for evaluating LLMs</h3><div class="meta">With Prof. Weijing Tang, CMU Statistics · 2025</div><p>Extended IRT-based LLM evaluation to multidimensional latent abilities with embedding-based item parameters, comparing maximum likelihood and Monte Carlo EM estimation in simulation.</p></div>
+</section>
+
+
+<section id="education">
+<h2>Education</h2>
+<div class="item"><h3>Carnegie Mellon University</h3><div class="meta">B.S. in Economics and Mathematical Sciences · 2024–2027 (expected)</div></div>
+<div class="item"><h3>The University of Hong Kong</h3><div class="meta">Quantitative Finance · 2023–2024, transferred to CMU</div></div>
+</section>
+</main>
+</div>
+</div>
+
+
+</html>
